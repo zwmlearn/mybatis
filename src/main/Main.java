@@ -28,9 +28,9 @@ public class Main {
 
             SqlSession sqlSession = sqlSessionFactory.openSession();
 
-            Student student = (Student) sqlSession.selectOne("model.Student.selectStudent", 1);
+            Student student = (Student) sqlSession.selectOne("model.StudentMapper.selectStudent", 1);
 
-            System.out.println(student.toString());
+            System.out.println(student);
 
             sqlSession.close();
         } catch (Exception e) {
